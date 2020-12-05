@@ -8,7 +8,7 @@ import {
   Link
 } from "react-router-dom";
 import Product from './components/product';
-
+import Logo from './assets/Logo.png';
 const Styles = styled.div`
 .link{
     color:black;
@@ -16,7 +16,16 @@ const Styles = styled.div`
 }
 #logo{
   color:black;
+  background: url(${Logo});
+  background-size: cover;
+  color:transparent;
 }
+
+nav{
+  position:relative;
+  
+}
+
 `;
 class App extends Component {
   render() {
@@ -27,7 +36,7 @@ class App extends Component {
           <Styles>
           <nav class="white" id="nav" role="navigation">
             <div class="nav-wrapper container">
-              <li  id="logo" class="brand-logo"><div className="link"><Link to="/">Cafe Place</Link></div></li>
+              <Link to="/"><div id="logo" className="link"><li  id="logo" class="brand-logo">Cafe Place</li></div></Link>
               <ul class="right hide-on-med-and-down">
                 <li>  <Link to="/products"><div className="link">Productos</div></Link></li>
                 <li>  <Link to="/products"><div className="link">Clientes</div></Link></li>
