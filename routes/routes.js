@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const Producto = require('../models/producto');
+const Cliente = require('../models/cliente');
+const Venta = require('../models/venta');
 
 //Metodo que obtiene todito todos los productos de la BD
 router.get('/', async (req, res) => {

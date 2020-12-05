@@ -1,28 +1,54 @@
 import React, { Component} from 'react';
 import Banner1 from '../assets/Banner1.jpg';
 import Banner2 from '../assets/Banner2.jpg';
+import styled from 'styled-components'
 
+const Styles = styled.div`
 
+#cover1{
+  background: url(${Banner1});
+  background-size: cover;
+}
+
+#cover2{
+  background: url(${Banner2});
+  background-size: cover;
+}
+
+.footer-copyright{
+  background-color:black;
+  color:white;
+}
+
+#about3{
+  color:white;
+}
+
+#footer{
+  margin-top:20px;
+}
+`;
 
 class Home extends Component{
     render(){
         return(
+          <Styles>
   <div>
 
   <div id="index-banner" class="parallax-container">
       <div class="section no-pad-bot">
         <div class="container">
           <br/><br/>
-          <h1 class="header center teal-text text-lighten-2">Cafe Place</h1>
+          <h1 class="header center white-text text-lighten-2">Cafe Place</h1>
           <div class="row center">
-            <h5 class="header col s12 light">Una experiencia única en cada taza.</h5>
+            <h5 class="header col s12 light white-text">Una experiencia única en cada taza.</h5>
           </div>
         
           <br/><br/>
   
         </div>
       </div>
-      <div class="parallax"><img src={Banner1} /></div>
+      <div class="parallax" id="cover1"><img src={Banner1} /></div>
     </div>
 
     <div class="container">
@@ -44,14 +70,14 @@ class Home extends Component{
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light"> Nuestros granos de café cuentan su propia historia</h5>
+          <h5  id="about3" class="header col s12 light"> Nuestros granos de café cuentan su propia historia</h5>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src={Banner2}/></div>
+    <div class="parallax" id="cover2"><img src={Banner2}/></div>
   </div>
 
-  <footer class="page-footer teal">
+  <footer class="page-footer black" id="footer">
    
     <div class="footer-copyright">
       <div class="container">
@@ -60,6 +86,7 @@ class Home extends Component{
     </div>
   </footer>
     </div>
+    </Styles>
 
 )
 }
