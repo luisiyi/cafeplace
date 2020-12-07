@@ -77,4 +77,38 @@ router.delete('/clientes/:id', async (req, res)=>{
     res.json({status: 'Cliente Eliminado'});
 })
 
+router.get('/ventas', async (req, res) => {
+    const venta = await Venta.find()
+    console.log(venta);
+    res.json(venta); 
+});
+
+
+router.get('/ventas/:id', async(req,res)=>{
+    const venta= await Venta.findById(req.params.id);
+    res.json(venta);
+})
+
+
+router.post('/ventas', async (req, res)=>{
+    const { idVenta, fecha, cajero, total} = req.body;
+    const venta= new Venta({idVenta, fecha, cajero, total});
+    await venta.save();
+    res.json({status: 'venta Guardada'}); 
+});
+
+
+router.put('/ventas/:id', async (req, res)=>{
+    const{idVenta, fecha, cajero, total}= req.body;
+    const newVenta = {idVenta, fecha, cajero, total};
+    await Venta.findByIdAndUpdate(req.params.id, newVenta);
+    res.json({status: 'Venta Actualizada'});
+})
+
+
+router.delete('/ventas/:id', async (req, res)=>{
+    await Venta.findByIdAndRemove(req.params.id);
+    res.json({status: 'Venta Eliminado'});
+})
+
 module.exports = router;

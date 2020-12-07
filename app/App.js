@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Home from './components/Home'
 import styled from 'styled-components';
+import Sale from  './components/Sale';
 import {
   BrowserRouter as Router,
   Switch,
@@ -41,17 +42,17 @@ class App extends Component {
               <ul class="right hide-on-med-and-down">
                 <li>  <Link to="/products"><div className="link">Productos</div></Link></li>
                 <li>  <Link to="/clients"><div className="link">Clientes</div></Link></li>
-                <li>  <Link to="/products"><div className="link">Ventas</div></Link></li>
+                <li>  <Link to="/sales"><div className="link">Ventas</div></Link></li>
               </ul>
               <ul id="nav-mobile" class="sidenav">
                 <li><a href="#">Navbar Link</a></li>
               </ul>
               <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             </div>
-          
+
           </nav>
           </Styles>
-        
+
           <Switch>
             <Route exact path="/">
               <Home />
@@ -62,11 +63,13 @@ class App extends Component {
             <Route path="/clients">
               <Client />
             </Route>
+            <Route path="/sales">
+              <Sale />
+            </Route>
           </Switch>
-
-          
         </div>
       </Router>
+
 
     )
   }
