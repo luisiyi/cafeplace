@@ -14,7 +14,7 @@ app.use(morgan('dev'));
 app.use(express.json());//función que comprueba los datos si son formatos JSON
 
 //Routes-URL's del servidor
-app.use('/api/productos',require('./routes/routes'));
+app.use('/api',require('./routes/routes'));
 
 //Static files-donde estan los archivos estaticos como html, ccs, js que estan en carpeta public
 app.use(express.static(path.join(__dirname, 'public')));

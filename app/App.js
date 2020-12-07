@@ -8,6 +8,7 @@ import {
   Link
 } from "react-router-dom";
 import Product from './components/product';
+import Client from './components/Client';
 import Logo from './assets/Logo.png';
 const Styles = styled.div`
 .link{
@@ -39,7 +40,7 @@ class App extends Component {
               <Link to="/"><div id="logo" className="link"><li  id="logo" class="brand-logo">Cafe Place</li></div></Link>
               <ul class="right hide-on-med-and-down">
                 <li>  <Link to="/products"><div className="link">Productos</div></Link></li>
-                <li>  <Link to="/products"><div className="link">Clientes</div></Link></li>
+                <li>  <Link to="/clients"><div className="link">Clientes</div></Link></li>
                 <li>  <Link to="/products"><div className="link">Ventas</div></Link></li>
               </ul>
               <ul id="nav-mobile" class="sidenav">
@@ -50,7 +51,7 @@ class App extends Component {
           
           </nav>
           </Styles>
-          <hr />
+        
           <Switch>
             <Route exact path="/">
               <Home />
@@ -58,8 +59,12 @@ class App extends Component {
             <Route path="/products">
               <Product />
             </Route>
-
+            <Route path="/clients">
+              <Client />
+            </Route>
           </Switch>
+
+          
         </div>
       </Router>
 
