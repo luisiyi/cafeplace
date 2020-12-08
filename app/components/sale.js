@@ -144,7 +144,7 @@ class Sale extends Component{
                                         <input name="total" onChange={this.handleChange} type = "number" placeholder="Total" value={this.state.total}/>
                                         </div>
                                     </div>
-                                    <button type="submit" className="btn light-blue darken-4">
+                                    <button type="submit" className="btn deep-orange darken-4">
                                         Agregar
                                     </button>
                                 </form>
@@ -152,7 +152,7 @@ class Sale extends Component{
                         </div>
                     </div>
                     <div className="col s7">
-                        <table>
+                        <table class="striped">
                             <thead>
                                 <tr>
                                     <th>Id Venta</th>
@@ -171,10 +171,10 @@ class Sale extends Component{
                                                 <td>{venta.cajero}</td>
                                                 <td>{venta.total}</td>
                                                 <td>
-                                                    <button className="btn light-blue darken-4" onClick={()=> this.eliminarVenta(venta._id)}>
+                                                    <button className="btn orange lighten-2" onClick={()=> this.eliminarVenta(venta._id)}>
                                                         <i className="material-icons">delete</i>
                                                     </button>
-                                                    <button onClick={() => this.editarVenta(venta._id)} className="btn light-blue darken-4" style={{margin: '2px'}}>
+                                                    <button onClick={() => this.editarVenta(venta._id)} className="btn brown darken-1" style={{margin: '2px'}}>
                                                         <i className="material-icons">edit</i>
                                                     </button>
                                                 </td>

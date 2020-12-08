@@ -158,7 +158,7 @@ class Product extends Component{
                                         <input name="imagen" onChange={this.handleChange} type = "text" placeholder="imagen del producto" value={this.state.imagen}/>
                                         </div>
                                     </div>
-                                    <button type="submit" className="btn light-blue darken-4">
+                                    <button type="submit" className="btn deep-orange darken-4">
                                         Agregar
                                     </button>
                                 </form>
@@ -166,7 +166,7 @@ class Product extends Component{
                         </div>
                     </div>
                     <div className="col s7">
-                        <table>
+                        <table class="striped centered">
                             <thead>
                                 <tr>
                                     <th>Id Producto</th>
@@ -187,10 +187,10 @@ class Product extends Component{
                                                 <td>{producto.precio}</td>
                                                 <td>{producto.stock}</td>
                                                 <td>
-                                                    <button className="btn light-blue darken-4" onClick={()=> this.eliminarProducto(producto._id)}>
+                                                    <button className="btn orange lighten-2" onClick={()=> this.eliminarProducto(producto._id)}>
                                                         <i className="material-icons">delete</i>
                                                     </button>
-                                                    <button onClick={() => this.editarProducto(producto._id)} className="btn light-blue darken-4" style={{margin: '2px'}}>
+                                                    <button onClick={() => this.editarProducto(producto._id)} className="btn brown darken-1" style={{margin: '2px'}}>
                                                         <i className="material-icons">edit</i>
                                                     </button>
                                                 </td>

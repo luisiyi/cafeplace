@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Home from './components/Home'
 import styled from 'styled-components';
-import Sale from  './components/Sale';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,6 +9,7 @@ import {
 } from "react-router-dom";
 import Product from './components/product';
 import Client from './components/Client';
+import Sale from  './components/Sale';
 import Logo from './assets/Logo.png';
 const Styles = styled.div`
 .link{
